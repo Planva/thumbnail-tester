@@ -18,6 +18,10 @@ const FRIENDLY_LINKS = [
     url: 'https://www.difficult-person-test.com',
   },
   {
+    name: 'Smart IQ Test ',
+    url: 'https://www.smarttest.cc',
+  },
+  {
     name: 'Calculator App',
     url: 'https://www.calculator-app.org',
   }
