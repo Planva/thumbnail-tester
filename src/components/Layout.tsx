@@ -24,6 +24,10 @@ const FRIENDLY_LINKS = [
   {
     name: 'Calculator App',
     url: 'https://www.calculator-app.org',
+  },
+  {
+    name: 'Future Value Calculator',
+    url: 'https://www.future-value-calculator.com/',
   }
 ];
 
