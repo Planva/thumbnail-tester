@@ -65,11 +65,12 @@ export function ComparisonPage() {
           <div
             className={`border-2 border-dashed rounded-lg p-8 text-center ${
               dragActive ? 'border-indigo-500 bg-indigo-50' : 'border-gray-300'
-            }`}
+            } cursor-pointer`}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
             onDrop={handleDrop}
+            onClick={() => document.getElementById('comparison-upload-input')?.click()}
           >
             <Upload className="mx-auto h-12 w-12 text-gray-400" />
             <p className="mt-4 text-lg font-medium text-gray-700">
@@ -78,16 +79,17 @@ export function ComparisonPage() {
             <p className="mt-2 text-sm text-gray-500">
               or
             </p>
-            <label className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+            <span className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Select Files
-              <input
-                type="file"
-                className="hidden"
-                accept="image/*"
-                multiple
-                onChange={handleFileInput}
-              />
-            </label>
+            </span>
+            <input
+              id="comparison-upload-input"
+              type="file"
+              className="hidden"
+              accept="image/*"
+              multiple
+              onChange={handleFileInput}
+            />
             <p className="mt-2 text-xs text-gray-500">
               PNG, JPG or GIF up to 5MB
             </p>

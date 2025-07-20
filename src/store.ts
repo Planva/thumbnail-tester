@@ -1,12 +1,10 @@
 import { create } from 'zustand';
 import { ThumbnailStore } from './types';
-import { translations } from './translations';
-
-type LanguageCode = keyof typeof translations.languageName;
 
 export const useStore = create<ThumbnailStore>((set) => ({
   thumbnails: [],
-  currentLanguage: 'en' as LanguageCode,
+  isDarkMode: true,
+  isTestPageDarkMode: true,
   
   addThumbnail: (file: File) => set((state) => {
     const newThumbnail = {
@@ -33,5 +31,7 @@ export const useStore = create<ThumbnailStore>((set) => ({
     ),
   })),
   
-  setLanguage: (lang: LanguageCode) => set({ currentLanguage: lang }),
+  toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
+  
+  toggleTestPageDarkMode: () => set((state) => ({ isTestPageDarkMode: !state.isTestPageDarkMode })),
 }));

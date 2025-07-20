@@ -9,11 +9,13 @@ export interface Thumbnail {
 
 export interface ThumbnailStore {
   thumbnails: Thumbnail[];
-  currentLanguage: keyof typeof import('./translations').translations.languageName;
+  isDarkMode: boolean;
+  isTestPageDarkMode: boolean;
   addThumbnail: (file: File) => void;
   removeThumbnail: (id: string) => void;
   updateTitle: (id: string, title: string) => void;
-  setLanguage: (lang: keyof typeof import('./translations').translations.languageName) => void;
+  toggleDarkMode: () => void;
+  toggleTestPageDarkMode: () => void;
 }
 
 export interface Translations {

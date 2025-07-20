@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import { Upload, BarChart2, Zap, TrendingUp, ArrowRight, AlertCircle } from 'lucide-react';
 import { YouTubeSimulator } from '../components/YouTubeSimulator';
 import { useStore } from '../store';
-import { useTranslation } from '../hooks/useTranslation';
 
 export function ABTestPage() {
-  const { t } = useTranslation();
   const { addThumbnail, thumbnails } = useStore();
+  const navigate = useNavigate();
   const [dragActive, setDragActive] = useState(false);
 
   const handleDrag = (e: React.DragEvent) => {
@@ -36,6 +36,8 @@ export function ABTestPage() {
         addThumbnail(file);
       }
     });
+    // Navigate to testing page after upload
+    navigate('/thumbnail-tester-online-free');
   };
 
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,17 +49,17 @@ export function ABTestPage() {
   return (
     <>
       <Helmet>
-        <title>{t('abTestTitle')}</title>
-        <meta name="description" content={t('abTestDescription')} />
+        <title>YouTube Thumbnail A/B Testing Tool - Compare and Optimize Your Thumbnails</title>
+        <meta name="description" content="Compare different versions of your YouTube thumbnails side by side. Test designs, analyze performance metrics, and choose the best performing thumbnail." />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
-            {t('abTestTitle')}
+            YouTube Thumbnail A/B Testing Tool - Compare and Optimize Your Thumbnails
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('abTestDescription')}
+            Compare different versions of your YouTube thumbnails side by side. Test designs, analyze performance metrics, and choose the best performing thumbnail.
           </p>
         </div>
 
@@ -131,11 +133,12 @@ export function ABTestPage() {
           <div
             className={`border-2 border-dashed rounded-lg p-8 text-center ${
               dragActive ? 'border-indigo-500 bg-indigo-50' : 'border-gray-300'
-            }`}
+            } cursor-pointer`}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
             onDrop={handleDrop}
+            onClick={() => document.getElementById('ab-upload-input')?.click()}
           >
             <Upload className="mx-auto h-12 w-12 text-gray-400" />
             <p className="mt-4 text-lg font-medium text-gray-700">
@@ -144,16 +147,17 @@ export function ABTestPage() {
             <p className="mt-2 text-sm text-gray-500">
               Upload two different versions to compare
             </p>
-            <label className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+            <span className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Select Files
-              <input
-                type="file"
-                className="hidden"
-                accept="image/*"
-                multiple
-                onChange={handleFileInput}
-              />
-            </label>
+            </span>
+            <input
+              id="ab-upload-input"
+              type="file"
+              className="hidden"
+              accept="image/*"
+              multiple
+              onChange={handleFileInput}
+            />
             <p className="mt-2 text-xs text-gray-500">
               PNG, JPG or GIF up to 5MB
             </p>
@@ -163,12 +167,14 @@ export function ABTestPage() {
         {thumbnails.length > 0 ? (
           <YouTubeSimulator thumbnails={thumbnails} />
         ) : (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start">
-            <AlertCircle className="h-5 w-5 text-yellow-400 mt-0.5 mr-3" />
-            <p className="text-sm text-yellow-700">
-              Upload two thumbnail versions to start A/B testing and see which one performs better.
-            </p>
-          </div>
+          <>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start">
+              <AlertCircle className="h-5 w-5 text-yellow-400 mt-0.5 mr-3" />
+              <p className="text-sm text-yellow-700">
+                Upload two thumbnail versions to start A/B testing and see which one performs better.
+              </p>
+            </div>
+          </>
         )}
       </div>
     </>
