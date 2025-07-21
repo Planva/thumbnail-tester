@@ -59,8 +59,8 @@ export function Home() {
   return (
     <>
       <Helmet>
-        <title>YouTube Thumbnail Tester - Free Online Tool for Testing Thumbnails</title>
-        <meta name="description" content="Test and optimize your YouTube thumbnails with our free online tool. Preview in different layouts, A/B test designs, and get AI-powered insights to improve click-through rates." />
+        <title>YouTube Thumbnail Tester - Free Online Tool for Testing Thumbnails|thumbnail-tester.com</title>
+        <meta name="description" content="Free online tool to test and optimize YouTube thumbnails: preview layouts, run A/B designs, and get AI insights to boost click-through rates." />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">

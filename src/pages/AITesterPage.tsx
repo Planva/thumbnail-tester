@@ -87,9 +87,9 @@ export function AITesterPage() {
   return (
     <>
       <Helmet>
-        <title>AI YouTube Thumbnail Analysis | Thumbnail Tester</title>
-        <meta name="description" content="Get AI-powered insights on your YouTube thumbnails. Analyze engagement potential and get recommendations for improvement." />
-        <meta name="keywords" content="ai youtube thumbnail tester, thumbnail tester ai, youtube thumbnail analysis" />
+        <title>AI YouTube Thumbnail Analysis |thumbnail-tester.com</title>
+        <meta name="description" content="Free AI Thumbnail Tester for YouTube: upload two covers, run instant A/B tests, see real CTR insights, and pick the design that drives more clicks." />
+        
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

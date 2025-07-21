@@ -6,9 +6,8 @@ export function HowToPage() {
   return (
     <>
       <Helmet>
-        <title>How to A/B Test YouTube Thumbnails - Complete Guide</title>
+        <title>How to A/B Test YouTube Thumbnails - Complete Guide|thumbnail-tester.com</title>
         <meta name="description" content="Learn how to effectively A/B test your YouTube thumbnails. Step-by-step guide with best practices and tips for better results." />
-        <meta name="keywords" content="how to a/b test thumbnails, youtube thumbnail testing guide, thumbnail optimization" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

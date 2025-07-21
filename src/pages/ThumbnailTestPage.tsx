@@ -56,8 +56,8 @@ export function ThumbnailTestPage() {
     return (
       <>
         <Helmet>
-          <title>Test Your YouTube Thumbnails | Thumbnail Tester</title>
-          <meta name="description" content="Test your YouTube thumbnails in a realistic environment. See how they look in different YouTube layouts and get instant feedback." />
+          <title>Thumbnail Tester | Free AI YouTube Thumbnail A/B Testing Tool|thumbnail-tester.com"</title>
+          <meta name="description" content="A/B‑test your YouTube thumbnails in seconds with our free AI Thumbnail Tester—find the design that wins more clicks." />
         </Helmet>
 
         <div className={`max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 ${isTestPageDarkMode ? 'bg-[#0f0f0f] text-white' : ''}`}>

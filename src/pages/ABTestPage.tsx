@@ -49,8 +49,8 @@ export function ABTestPage() {
   return (
     <>
       <Helmet>
-        <title>YouTube Thumbnail A/B Testing Tool - Compare and Optimize Your Thumbnails</title>
-        <meta name="description" content="Compare different versions of your YouTube thumbnails side by side. Test designs, analyze performance metrics, and choose the best performing thumbnail." />
+        <title>YouTube Thumbnail A/B Testing | thumbnail-tester.com</title>
+        <meta name="description" content="Free AI tool for quick YouTube thumbnail A/B testing. Upload two images, get real CTR insights, and pick the design that earns more clicks and views." />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

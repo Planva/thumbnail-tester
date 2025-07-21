@@ -148,7 +148,7 @@ export function Layout() {
             ))}
           </div>
           <p className={`text-center text-xs ${shouldUseDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-            © {new Date().getFullYear()} YouTube-Thumbnail-Tester. All rights reserved.
+            © {new Date().getFullYear()} www.thumbnail-tester.com. All rights reserved.
           </p>
         </div>
       </footer>

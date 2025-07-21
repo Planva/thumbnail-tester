@@ -46,9 +46,8 @@ export function ComparisonPage() {
   return (
     <>
       <Helmet>
-        <title>Compare YouTube Thumbnails | Thumbnail Test and Compare</title>
-        <meta name="description" content="Compare different YouTube thumbnail designs side by side. Test their effectiveness and get insights on which performs better." />
-        <meta name="keywords" content="thumbnail test and compare, youtube thumbnail test and compare" />
+        <title>Compare YouTube Thumbnails|Thumbnail Test and Compare|thumbnail-tester.com</title>
+        <meta name="description" content="Compare different YouTube thumbnail designs side by side.Test their effectiveness and get insights on which performs better." />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
