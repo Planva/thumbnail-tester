@@ -30,6 +30,11 @@ const routes = [
     changefreq: 'monthly'
   },
   {
+    path: '/thumbnail-download',
+    priority: '0.8',
+    changefreq: 'weekly'
+  },
+  {
     path: '/youtube-thumbnail-test-and-compare',
     priority: '0.8',
     changefreq: 'weekly'

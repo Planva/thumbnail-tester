@@ -7,6 +7,7 @@ import { ThumbnailTestPage } from './pages/ThumbnailTestPage';
 import { HowToPage } from './pages/HowToPage';
 import { AITesterPage } from './pages/AITesterPage';
 import { ComparisonPage } from './pages/ComparisonPage';
+import { ThumbnailDownloadPage } from './pages/ThumbnailDownloadPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="thumbnail-tester-ai" element={<AITesterPage />} />
         <Route path="thumbnail-tester-online-free" element={<ThumbnailTestPage />} />
         <Route path="how-to-ab-test-thumbnails" element={<HowToPage />} />
+        <Route path="thumbnail-download" element={<ThumbnailDownloadPage />} />
         <Route path="youtube-thumbnail-test-and-compare" element={<ComparisonPage />} />
       </Route>
     </Routes>

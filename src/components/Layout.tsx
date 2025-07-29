@@ -18,16 +18,8 @@ const FRIENDLY_LINKS = [
     url: 'https://www.difficult-person-test.com',
   },
   {
-    name: 'Smart IQ Test ',
-    url: 'https://www.smarttest.cc',
-  },
-  {
     name: 'Calculator App',
     url: 'https://www.calculator-app.org',
-  },
-  {
-    name: 'Future Value Calculator',
-    url: 'https://www.future-value-calculator.com/',
   }
 ];
 
@@ -72,6 +64,7 @@ export function Layout() {
               <Link to="/youtube-b/b-test" className={`${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400' : 'text-gray-600 hover:text-indigo-600'}`}>A/B Test</Link>
               <Link to="/thumbnail-tester-ai" className={`${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400' : 'text-gray-600 hover:text-indigo-600'}`}>AI Analysis</Link>
               <Link to="/how-to-ab-test-thumbnails" className={`${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400' : 'text-gray-600 hover:text-indigo-600'}`}>How To</Link>
+              <Link to="/thumbnail-download" className={`${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400' : 'text-gray-600 hover:text-indigo-600'}`}>Download Thumbnail</Link>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -115,6 +108,13 @@ export function Layout() {
                   How To
                 </Link>
                 <Link 
+                  to="/thumbnail-download" 
+                  className={`px-2 py-2 rounded-md ${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400 hover:bg-gray-700' : 'text-gray-600 hover:text-indigo-600 hover:bg-gray-50'}`}
+                  onClick={closeMobileMenu}
+                >
+                  Download Thumbnail
+                </Link>
+                <Link 
                   to="/thumbnail-tester-online-free" 
                   className={`px-2 py-2 rounded-md ${shouldUseDarkMode ? 'text-gray-300 hover:text-indigo-400 hover:bg-gray-700' : 'text-gray-600 hover:text-indigo-600 hover:bg-gray-50'}`}
                   onClick={closeMobileMenu}
@@ -148,7 +148,7 @@ export function Layout() {
             ))}
           </div>
           <p className={`text-center text-xs ${shouldUseDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-            © {new Date().getFullYear()} www.thumbnail-tester.com. All rights reserved.
+            © {new Date().getFullYear()} YouTube-Thumbnail-Tester. All rights reserved.
           </p>
         </div>
       </footer>
