@@ -6,20 +6,20 @@ import { translations } from '../translations';
 
 const FRIENDLY_LINKS = [
   {
-    name: 'Sending Prayers',
-    url: 'https://www.sending-prayers.com/',
-  },
-  {
     name: 'TAT Test',
     url: 'https://www.tat-test.com',
   },
   {
-    name: 'Difficult Person Test',
-    url: 'https://www.difficult-person-test.com',
+    name: 'Ai Manga Translate',
+    url: 'https://aimangatranslate.com',
   },
   {
-    name: 'Calculator App',
-    url: 'https://www.calculator-app.org',
+    name: 'PDF Translation',
+    url: 'https://pdf-translation.com',
+  },
+  {
+    name: 'Free Online Clipboard',
+    url: 'https://onlinclipboard.com',
   }
 ];
 
