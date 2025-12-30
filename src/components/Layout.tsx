@@ -18,6 +18,10 @@ const FRIENDLY_LINKS = [
     url: 'https://pdf-translation.com',
   },
   {
+    name: 'Digital Planner',
+    url: 'https://digiplanpro.com',
+  },
+  {
     name: 'Free Online Clipboard',
     url: 'https://onlinclipboard.com',
   }
