@@ -14,6 +14,10 @@ const FRIENDLY_LINKS = [
     url: 'https://aimangatranslate.com',
   },
   {
+    name: 'Ai Timeline Maker',
+    url: 'https://timeline-maker.org',
+  },
+  {
     name: 'PDF Translation',
     url: 'https://pdf-translation.com',
   },
